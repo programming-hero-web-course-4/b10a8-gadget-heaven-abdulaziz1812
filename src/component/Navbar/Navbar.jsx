@@ -11,14 +11,14 @@ const Navbar = () => {
     console.log(pathname);
 
     const links = <>
-        <li><NavLink to="/">Home</NavLink></li>
+        <li className='active:bg-white'><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/statistics">Statistics</NavLink></li>
         <li><NavLink to="/dashboard">Dashboard</NavLink></li>
 
     </>
     return (
-        <div>
-            <div className="navbar bg-white w-11/12 mx-auto my-6">
+        <div className=' bg-white'>
+            <div className="navbar w-11/12 mx-auto my-6">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -41,10 +41,10 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl font-bold">Gadget Heaven</a>
+                    <a className={`btn btn-ghost text-xl font-bold ${pathname === "/"  ? "text-white": " "}`}>Gadget Heaven</a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                <div className={`navbar-center hidden lg:flex ${pathname === "/"  ? "text-white ": " "}`}>
+                    <ul className="menu menu-horizontal px-1 ">
                         {links}
                     </ul>
                 </div>

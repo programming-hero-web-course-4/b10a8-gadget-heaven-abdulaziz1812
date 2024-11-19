@@ -1,7 +1,14 @@
 import React from 'react';
 import bannerImg from '../../assets/banner.jpg'
+import { useNavigate } from 'react-router-dom';
 
-const Banner = () => {
+const  Banner = () => {
+    const dashboard = useNavigate()
+
+    const handelShopNowBtn = () =>{
+        dashboard('/dashboard')
+    }
+
     return (
         <div className='w-[97%] mx-auto -m-24 mb-24'>
             <div className="hero bg-purple-600 place-items-start pt-28 min-h-[694px] rounded-[32px] pla">
@@ -11,7 +18,7 @@ const Banner = () => {
                         <p className="py-6 text-white">
                             Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
                         </p>
-                        <button className="btn rounded-[32px] text-purple-600 font-bold">Shop Now</button>
+                        <button className="btn rounded-[32px] text-purple-600 font-bold" onClick={handelShopNowBtn}>Shop Now</button>
                     </div>
                 </div>
             </div>
