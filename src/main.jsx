@@ -11,6 +11,8 @@ import Error from './component/Error/Error';
 import Home from './component/Home/Home';
 import Statistics from './component/Statistics/Statistics';
 import Dashboard from './component/Dashboard/Dashboard';
+import Gadget from './component/Gadget/Gadget';
+import Categories from './component/Categories/Categories';
 
 const router = createBrowserRouter([
   {
@@ -20,7 +22,34 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home> 
+        element: <Home></Home>,
+        children: [
+          {
+            path: "/category/:category",
+            element: <Categories></Categories>
+            // loader: ()=> fetch('./gadgetsData.json')
+          },
+          // {
+          //   path: "/category/laptops",
+          //   element: <Categories category="Laptop" ></Categories>,
+          //   loader: ()=> fetch('./gadgetsData.json')
+          // },
+          // {
+          //   path: "/category/phones",
+          //   element: <Categories category='Phone' ></Categories>,
+          //   loader: ()=> fetch('./gadgetsData.json')
+          // },
+          // {
+          //   path: "/category/smart-Watches",
+          //   element: <Categories category='Smart Watche' ></Categories>,
+          //   loader: ()=> fetch('./gadgetsData.json')
+          // },
+          // {
+          //   path: "/category/accessories",
+          //   element: <Categories category='Accessories' ></Categories>,
+          //   loader: ()=> fetch('./gadgetsData.json')
+          // }
+        ] 
       },
       {
         path: "statistics",

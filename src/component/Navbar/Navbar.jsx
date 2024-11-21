@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { PiShoppingCartLight } from "react-icons/pi";
 import { FaRegHeart } from "react-icons/fa";
 import { useLocation } from 'react-router-dom';
@@ -8,12 +8,13 @@ const Navbar = () => {
 
 
     const { pathname } = useLocation()
-    console.log(pathname);
+    
 
     const links = <>
-        <li className='active:bg-white'><NavLink to="/">Home</NavLink></li>
+        <li><Link to="/" className={`${pathname === "/"  ? "font-bold" : " "}`}>Home</Link></li>
         <li><NavLink to="/statistics">Statistics</NavLink></li>
         <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+        
 
     </>
     return (
@@ -41,10 +42,10 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className={`btn btn-ghost text-xl font-bold ${pathname === "/"  ? "text-white": " "}`}>Gadget Heaven</a>
+                    <a className={`btn btn-ghost text-xl font-bold ${pathname === "/"  ? "text-white ": " "}`}>Gadget Heaven</a>
                 </div>
-                <div className={`navbar-center hidden lg:flex ${pathname === "/"  ? "text-white ": " "}`}>
-                    <ul className="menu menu-horizontal px-1 ">
+                <div className={`navbar-center hidden lg:flex ${pathname === "/"  ? "text-white btn-link   ": " "}`}>
+                    <ul className="menu menu-horizontal px-1" >
                         {links}
                     </ul>
                 </div>

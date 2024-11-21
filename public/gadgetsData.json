@@ -1,0 +1,206 @@
+[
+    {
+        "product_id": "P001",
+        "product_title": "Dell XPS 15",
+        "product_image": "https://i.ibb.co.com/rQBrGS2/01-XPS-15-9530-c-1421.jpg",
+        "category": "Laptop",
+        "price": 1200,
+        "description": "High-performance laptop for professionals and creators.",
+        "specifications": [
+            "Processor: Intel Core i7",
+            "RAM: 16GB",
+            "Storage: 1TB SSD",
+            "Graphics Card: NVIDIA RTX 3050",
+            "Screen Size: 15.6 inches"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "P002",
+        "product_title": "MacBook Pro 14",
+        "product_image": "https://i.ibb.co.com/tJmkGNs/02-Mac-Book.jpg",
+        "category": "Laptop",
+        "price": 1500,
+        "description": "Apple's flagship laptop with powerful M-series chip.",
+        "specifications": [
+            "Processor: Apple M2 Pro",
+            "RAM: 16GB",
+            "Storage: 512GB SSD",
+            "Battery Life: Up to 20 hours",
+            "Screen Size: 14 inches"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "P003",
+        "product_title": "HP Spectre x360",
+        "product_image": "https://i.ibb.co.com/TH43Gg0/03-HP-Spectre-x360-Convertible-14-EF2013-DX-a-1801.jpg",
+        "category": "Laptop",
+        "price": 1400,
+        "description": "Versatile 2-in-1 laptop with touch screen and premium design.",
+        "specifications": [
+            "Processor: Intel Core i7",
+            "RAM: 16GB",
+            "Storage: 1TB SSD",
+            "Battery Life: Up to 12 hours",
+            "Screen Size: 13.3 inches"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P004",
+        "product_title": "Lenovo ThinkPad X1",
+        "product_image": "https://i.ibb.co.com/rFD7Ry3/04-Lenovo-Think-Pad-X1-Carbon-Gen-10-1127.jpg",
+        "category": "Laptop",
+        "price": 1300,
+        "description": "Business laptop with unmatched reliability and performance.",
+        "specifications": [
+            "Processor: Intel Core i7",
+            "RAM: 16GB",
+            "Storage: 512GB SSD",
+            "Weight: 1.2kg",
+            "Screen Size: 14 inches"
+        ],
+        "availability": false,
+        "rating": 4.6
+    },
+    {
+        "product_id": "P005",
+        "product_title": "Asus ROG Zephyrus",
+        "product_image": "https://i.ibb.co.com/xJBh0CN/05-Asus-ROG-Zephyrus-G14-4-3.webp",
+        "category": "Laptop",
+        "price": 1600,
+        "description": "Powerful gaming laptop with high-refresh display.",
+        "specifications": [
+            "Processor: AMD Ryzen 9",
+            "RAM: 32GB",
+            "Storage: 1TB SSD",
+            "Graphics Card: NVIDIA RTX 3060",
+            "Screen Size: 14 inches"
+        ],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "P006",
+        "product_title": "Acer Swift 3",
+        "product_image": "https://i.ibb.co.com/0K1VdJ6/06-Acer-Swift-3-GO-Price-In-BD-4.jpg",
+        "category": "Laptop",
+        "price": 800,
+        "description": "Lightweight laptop with excellent battery life.",
+        "specifications": [
+            "Processor: AMD Ryzen 7",
+            "RAM: 8GB",
+            "Storage: 512GB SSD",
+            "Battery Life: Up to 15 hours",
+            "Screen Size: 14 inches"
+        ],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "P007",
+        "product_title": "Samsung Galaxy S23",
+        "product_image": "https://i.ibb.co.com/9w9HhwV/07-Galaxy-S23-Ultra-Cream.jpg",
+        "category": "Phone",
+        "price": 800,
+        "description": "Premium smartphone with advanced camera and sleek design.",
+        "specifications": [
+            "Processor: Snapdragon 8 Gen 2",
+            "RAM: 8GB",
+            "Storage: 256GB",
+            "Camera: 50MP Triple Camera",
+            "Screen Size: 6.1 inches"
+        ],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P008",
+        "product_title": "iPhone 14 Pro",
+        "product_image": "https://i.ibb.co.com/ByvKkhz/08i-Phone-14-Pro-Deep-Purple.jpg",
+        "category": "Phone",
+        "price": 1100,
+        "description": "Apple's flagship phone with ProMotion display and Dynamic Island.",
+        "specifications": [
+            "Processor: A16 Bionic",
+            "RAM: 6GB",
+            "Storage: 512GB",
+            "Camera: 48MP Triple Camera",
+            "Screen Size: 6.1 inches"
+        ],
+        "availability": false,
+        "rating": 4.8
+    },
+    {
+        "product_id": "P009",
+        "product_title": "Galaxy Watch 6",
+        "product_image": "https://i.ibb.co.com/xSBJrqY/09-Samsung-Galaxy-Watch-6-40mm-1.jpg",
+        "category": "Smart-Watch",
+        "price": 300,
+        "description": "Stylish smartwatch with health tracking and advanced features.",
+        "specifications": [
+            "Display: AMOLED 1.4 inches",
+            "Battery Life: Up to 40 hours",
+            "Water Resistance: 5 ATM",
+            "Compatibility: Android",
+            "Weight: 52g"
+        ],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "P010",
+        "product_title": "Apple Watch 8",
+        "product_image": "https://i.ibb.co.com/02kC51N/10-Apple-Watch-Series-8-GPS-Cellular-Midnight-4171.jpg",
+        "category": "Smart-Watch",
+        "price": 400,
+        "description": "Advanced smartwatch with fitness tracking and ECG monitoring.",
+        "specifications": [
+            "Display: Retina OLED",
+            "Battery Life: 18 hours",
+            "Water Resistance: WR50",
+            "Compatibility: iOS",
+            "Weight: 38g"
+        ],
+        "availability": true,
+        "rating": 4.9
+    },
+    {
+        "product_id": "P011",
+        "product_title": "Logitech MX Master",
+        "product_image": "https://i.ibb.co.com/XVhvQHT/11-Logitech-MX-Master.jpg",
+        "category": "Accessories",
+        "price": 100,
+        "description": "Ergonomic wireless mouse with customizable buttons.",
+        "specifications": [
+          "Connectivity: Bluetooth and USB",
+          "Battery Life: 70 days",
+          "Weight: 141g",
+          "DPI: 4000",
+          "Compatibility: Windows, Mac, Linux"
+        ],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": "P012",
+        "product_title": "Razer BlackWidow",
+        "product_image": "https://i.ibb.co.com/vV0TN8k/12blackwidow-v3-500x500-450x450.jpg",
+        "category": "Accessories",
+        "price": 150,
+        "description": "Mechanical gaming keyboard with Razer Green switches.",
+        "specifications": [
+          "Switch Type: Mechanical",
+          "Backlight: RGB",
+          "Key Rollover: N-key",
+          "Cable Length: 1.8m",
+          "Weight: 1.25kg"
+        ],
+        "availability": true,
+        "rating": 4.7
+    }
+]
