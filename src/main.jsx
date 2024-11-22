@@ -13,6 +13,9 @@ import Statistics from './component/Statistics/Statistics';
 import Dashboard from './component/Dashboard/Dashboard';
 import Gadget from './component/Gadget/Gadget';
 import Categories from './component/Categories/Categories';
+import ProductDetails from './component/ProductDetails/ProductDetails';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const router = createBrowserRouter([
   {
@@ -27,29 +30,13 @@ const router = createBrowserRouter([
           {
             path: "/category/:category",
             element: <Categories></Categories>
-            // loader: ()=> fetch('./gadgetsData.json')
-          },
-          // {
-          //   path: "/category/laptops",
-          //   element: <Categories category="Laptop" ></Categories>,
-          //   loader: ()=> fetch('./gadgetsData.json')
-          // },
-          // {
-          //   path: "/category/phones",
-          //   element: <Categories category='Phone' ></Categories>,
-          //   loader: ()=> fetch('./gadgetsData.json')
-          // },
-          // {
-          //   path: "/category/smart-Watches",
-          //   element: <Categories category='Smart Watche' ></Categories>,
-          //   loader: ()=> fetch('./gadgetsData.json')
-          // },
-          // {
-          //   path: "/category/accessories",
-          //   element: <Categories category='Accessories' ></Categories>,
-          //   loader: ()=> fetch('./gadgetsData.json')
-          // }
+          }
         ] 
+      },
+      {
+        path: "product/:product_id",
+        element: <ProductDetails></ProductDetails>,
+        loader: () => fetch('/gadgetsData.json')
       },
       {
         path: "statistics",
@@ -57,7 +44,8 @@ const router = createBrowserRouter([
       },
       {
         path: "dashboard",
-        element: <Dashboard></Dashboard>
+        element: <Dashboard></Dashboard>,
+        loader: () => fetch('/gadgetsData.json')
       },
     ],
   },
@@ -66,5 +54,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    
   </StrictMode>,
 )

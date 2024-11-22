@@ -27,11 +27,12 @@ const Gadgets = () => {
             <div className=' flex flex-col md:flex-row items-center md:items-start gap-6'>
                 <div className='lg:w-1/5 w-48'>
                     <div className='border rounded-2xl bg-white p-6 flex flex-col  gap-6'>
-                        <NavLink to="/" className="btn  xl:text-lg rounded-full flex justify-start">All Product</NavLink>
-                        <NavLink to="/category/laptop" className="btn  xl:text-lg rounded-full flex justify-start">Laptops</NavLink>
-                        <NavLink to="/category/phone" className="btn  xl:text-lg rounded-full flex justify-start">Phones</NavLink>
-                        <NavLink to="/category/smart-watch" className="btn  xl:text-lg rounded-full flex justify-start">Smart Watch</NavLink>
-                        <NavLink to="/category/accessories" className="btn  xl:text-lg rounded-full flex justify-start">Accessories</NavLink>
+                        <NavLink to="/" className={`btn  xl:text-lg rounded-full flex justify-start ${pathname === "/"?"bg-purple-600 text-white" :""}`}>All Product</NavLink>
+                        <NavLink to="/category/laptop" className={`btn  xl:text-lg rounded-full flex justify-start ${pathname === "/category/laptop"?"bg-purple-600 text-white" :""}`}>Laptops</NavLink>
+                        <NavLink to="/category/phone" className={`btn  xl:text-lg rounded-full flex justify-start ${pathname === "/category/phone"?"bg-purple-600 text-white" :""}`}>Phones</NavLink>
+                        <NavLink to="/category/smart-watch" className={`btn  xl:text-lg rounded-full flex justify-start ${pathname === "/category/smart-watch"?"bg-purple-600 text-white" :""}`}>Smart Watch</NavLink>
+                        <NavLink to="/category/accessories" className={`btn  xl:text-lg rounded-full flex justify-start ${pathname === "/category/accessories"?"bg-purple-600 text-white" :""}`}>Accessories</NavLink>
+                        <NavLink to="/category/tablet" className={`btn  xl:text-lg rounded-full flex justify-start ${pathname === "/category/tablet"?"bg-purple-600 text-white" :""}`}>Tablet</NavLink>
 
 
 

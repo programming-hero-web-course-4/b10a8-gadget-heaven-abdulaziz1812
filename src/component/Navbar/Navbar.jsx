@@ -8,24 +8,25 @@ const Navbar = () => {
 
 
     const { pathname } = useLocation()
-    
+
 
     const links = <>
-        <li><Link to="/" className={`${pathname === "/"  ? "font-bold" : " "}`}>Home</Link></li>
+        <li><Link to="/" className={`${pathname === "/" ? "font-bold" : " "}`}>Home</Link></li>
         <li><NavLink to="/statistics">Statistics</NavLink></li>
         <li><NavLink to="/dashboard">Dashboard</NavLink></li>
-        
+
 
     </>
     return (
-        <div className=' bg-white'>
-            <div className="navbar w-11/12 mx-auto my-6">
-                <div className="navbar-start">
+        <div className=' bg-white '>
+            <div className="mx-auto max-w-screen-2xl">
+            <div className="navbar w-11/12  mx-auto my-6 max-w-screen-2xl">
+                <div className="navbar-start ">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5"
+                                className={`h-5 w-5 ${pathname === "/" ? "text-white " : " "}`}
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor">
@@ -42,9 +43,9 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                    <a className={`btn btn-ghost text-xl font-bold ${pathname === "/"  ? "text-white ": " "}`}>Gadget Heaven</a>
+                    <a className={`btn btn-ghost text-xl font-bold ${pathname === "/" ? "text-white " : " "}`}>Gadget Heaven</a>
                 </div>
-                <div className={`navbar-center hidden lg:flex ${pathname === "/"  ? "text-white btn-link   ": " "}`}>
+                <div className={`navbar-center hidden lg:flex ${pathname === "/" ? "text-white btn-link   " : " "}`}>
                     <ul className="menu menu-horizontal px-1" >
                         {links}
                     </ul>
@@ -55,6 +56,7 @@ const Navbar = () => {
                         <FaRegHeart className='border rounded-full w-10 h-10 p-2 bg-white' />
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     );

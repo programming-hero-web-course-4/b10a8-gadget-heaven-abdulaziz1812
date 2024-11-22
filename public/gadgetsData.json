@@ -64,7 +64,7 @@
             "Weight: 1.2kg",
             "Screen Size: 14 inches"
         ],
-        "availability": false,
+        "availability": true,
         "rating": 4.6
     },
     {
@@ -132,7 +132,7 @@
             "Camera: 48MP Triple Camera",
             "Screen Size: 6.1 inches"
         ],
-        "availability": false,
+        "availability": true,
         "rating": 4.8
     },
     {

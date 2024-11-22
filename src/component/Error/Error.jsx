@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Error = () => {
-     const home = useNavigate();
+     const navigate = useNavigate();
 
      const handelHomeBtn = () =>{
-        home('/')
+        navigate('/')
      }
 
     return (
