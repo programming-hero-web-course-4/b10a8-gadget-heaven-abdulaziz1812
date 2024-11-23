@@ -16,7 +16,7 @@ You can find the detailed requirement document for this project here:
 - [React Helmet Async Documentation](https://www.npmjs.com/package/react-helmet-async)
 
 ## React Fundamentals Used in This Project
-In this project, we have used several React fundamentals to manage the structure and functionality:
+
 
 - **JSX**
 - **Components**
