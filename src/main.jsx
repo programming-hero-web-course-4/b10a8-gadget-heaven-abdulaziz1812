@@ -16,6 +16,7 @@ import Categories from './component/Categories/Categories';
 import ProductDetails from './component/ProductDetails/ProductDetails';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Faq from './component/Faq/Faq';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
         element: <Dashboard></Dashboard>,
         loader: () => fetch('/gadgetsData.json')
       },
+      {
+        path: "faq",
+        element: <Faq></Faq>
+      }
     ],
   },
 ]);

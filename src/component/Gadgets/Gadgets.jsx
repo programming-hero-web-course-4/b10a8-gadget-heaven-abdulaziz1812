@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Categories from '../Categories/Categories';
 import Gadget from '../Gadget/Gadget';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+
 
 
 
@@ -32,11 +31,9 @@ const Gadgets = () => {
                         <NavLink to="/category/phone" className={`btn  xl:text-lg rounded-full flex justify-start ${pathname === "/category/phone"?"bg-purple-600 text-white" :""}`}>Phones</NavLink>
                         <NavLink to="/category/smart-watch" className={`btn  xl:text-lg rounded-full flex justify-start ${pathname === "/category/smart-watch"?"bg-purple-600 text-white" :""}`}>Smart Watch</NavLink>
                         <NavLink to="/category/accessories" className={`btn  xl:text-lg rounded-full flex justify-start ${pathname === "/category/accessories"?"bg-purple-600 text-white" :""}`}>Accessories</NavLink>
+                        <NavLink to="/category/chargers" className={`btn  xl:text-lg rounded-full flex justify-start ${pathname === "/category/chargers"?"bg-purple-600 text-white" :""}`}>Chargers</NavLink>
+                        <NavLink to="/category/power-banks" className={`btn  xl:text-lg rounded-full flex justify-start ${pathname === "/category/power-banks"?"bg-purple-600 text-white" :""}`}>Power Bank</NavLink>
                         <NavLink to="/category/tablet" className={`btn  xl:text-lg rounded-full flex justify-start ${pathname === "/category/tablet"?"bg-purple-600 text-white" :""}`}>Tablet</NavLink>
-
-
-
-
                     </div>
                 </div>
                 <div className={`${pathname === "/" ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" : ""} `}>

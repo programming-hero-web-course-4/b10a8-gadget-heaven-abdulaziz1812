@@ -14,6 +14,7 @@ const Navbar = () => {
         <li><Link to="/" className={`${pathname === "/" ? "font-bold" : " "}`}>Home</Link></li>
         <li><NavLink to="/statistics">Statistics</NavLink></li>
         <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+        <li><NavLink to="/faq">FAQ</NavLink></li>
 
 
     </>
