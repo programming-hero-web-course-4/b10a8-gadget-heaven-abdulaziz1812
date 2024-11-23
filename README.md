@@ -4,7 +4,7 @@ Welcome to **Gadget Heaven**, your ultimate destination for exploring cutting-ed
 
 ## Live Website Link
 You can visit the live website at:  
-**[gadget-heaven-08.surge.sh](gadget-heaven-08.surge.sh)**
+**[https://purple-pets.surge.sh/](https://purple-pets.surge.sh/)**
 
 ## Requirement Document
 You can find the detailed requirement document for this project here:  
