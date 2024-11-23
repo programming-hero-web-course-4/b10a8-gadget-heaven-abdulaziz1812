@@ -7,6 +7,7 @@ import { CiHeart } from "react-icons/ci";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { addToStoredCartList, addToStoredWishList } from '../../utility/addToDb';
+import { Helmet } from 'react-helmet';
 
 const ProductDetails = () => {
     const { product_id } = useParams()
@@ -42,6 +43,9 @@ const ProductDetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Product Details | Gadget Heaven</title>
+            </Helmet>
             <ToastContainer />
             <div className='bg-purple-600 -mt-6'>
         <div className='md:w-8/12 mx-auto text-white text-center pt-8 pb-8 md:pb-60' >

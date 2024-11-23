@@ -7,6 +7,7 @@ import { getStoredCartList, getStoredWishList } from '../../utility/addToDb';
 import Cart from '../Cart/Cart';
 import Wishlist from '../WishList/Wishlist';
 import image from '../../assets/Group.png'
+import { Helmet } from 'react-helmet';
 
 
 const Dashboard = () => {
@@ -54,6 +55,9 @@ const Dashboard = () => {
 
     return (
         <div>
+            <Helmet>
+            <title>Dashboard | Gadget Heaven</title>
+            </Helmet>
             <div>
                 <ToastContainer />
                 <div className='bg-purple-600 -mt-6'>
