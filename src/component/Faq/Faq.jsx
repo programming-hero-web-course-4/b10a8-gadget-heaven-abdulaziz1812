@@ -1,8 +1,9 @@
 import React from 'react';
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Faq = () => {
     return (
+        <HelmetProvider>
         <div>
             <div>
                 <Helmet>
@@ -91,6 +92,7 @@ const Faq = () => {
                 </div>
             </div>
         </div>
+        </HelmetProvider>
     );
 };
 

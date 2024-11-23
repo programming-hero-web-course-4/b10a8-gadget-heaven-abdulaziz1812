@@ -3,8 +3,9 @@ import React from 'react';
 const Wishlist = ({ product }) => {
 
   const { product_image, product_title, description, price } = product
-    return (
-        <div>
+  
+  return (
+    <div>
       <div className='border rounded-2xl p-8 flex justify-between bg-white '>
         <div className="flex items-center gap-3">
           <div className="avatar">
@@ -37,7 +38,7 @@ const Wishlist = ({ product }) => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default Wishlist;

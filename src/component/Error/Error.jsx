@@ -4,11 +4,11 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Error = () => {
-     const navigate = useNavigate();
+    const navigate = useNavigate();
 
-     const handelHomeBtn = () =>{
+    const handelHomeBtn = () => {
         navigate('/')
-     }
+    };
 
     return (
         <div className='flex justify-center items-center min-h-screen '>

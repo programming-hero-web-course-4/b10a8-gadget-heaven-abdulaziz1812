@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import Gadget from '../Gadget/Gadget';
 
 const Categories = () => {
-    const { category } = useParams()
-    const [gadgets, setGadgets] = useState([])
+    const { category } = useParams();
+    const [gadgets, setGadgets] = useState([]);
 
     useEffect(() => {
         fetch('/gadgetsData.json')

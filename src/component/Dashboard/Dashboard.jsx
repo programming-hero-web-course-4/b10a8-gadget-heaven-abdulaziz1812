@@ -7,19 +7,19 @@ import { getStoredCartList, getStoredWishList } from '../../utility/addToDb';
 import Cart from '../Cart/Cart';
 import Wishlist from '../WishList/Wishlist';
 import image from '../../assets/Group.png'
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
 const Dashboard = () => {
-    const [showSection, setShowSection] = useState(true)
-    const allProduct = useLoaderData()
-    const [cartList, setCartList] = useState([])
-    const [wishList, setWishList] = useState([])
+    const [showSection, setShowSection] = useState(true);
+    const allProduct = useLoaderData();
+    const [cartList, setCartList] = useState([]);
+    const [wishList, setWishList] = useState([]);
     const navigate = useNavigate();
 
-     const handelHome = () =>{
+    const handelHome = () => {
         navigate('/')
-     }
+    };
 
 
     useEffect(() => {
@@ -32,31 +32,32 @@ const Dashboard = () => {
 
         const wishList = allProduct.filter(product => storedWishList.includes(product.product_id))
         setWishList(wishList);
-    }, [])
+    }, []);
 
 
 
-    let totalPrice = 0
+    let totalPrice = 0;
     cartList.forEach(product => {
         totalPrice = totalPrice + product.price
-    })
+    });
 
 
 
     const handleSortPrice = () => {
         const sortedPrice = [...cartList].sort((a, b) => b.price - a.price)
         setCartList(sortedPrice)
-    }
+    };
 
-    const handlePurchase =() =>{
+    const handlePurchase = () => {
         document.getElementById('my_modal_1').showModal()
         localStorage.clear()
-    }
+    };
 
     return (
+        <HelmetProvider>
         <div>
             <Helmet>
-            <title>Dashboard | Gadget Heaven</title>
+                <title>Dashboard | Gadget Heaven</title>
             </Helmet>
             <div>
                 <ToastContainer />
@@ -100,7 +101,7 @@ const Dashboard = () => {
                         <button className="btn hidden" onClick={() => document.getElementById('my_modal_1').showModal()}>open modal</button>
                         <dialog id="my_modal_1" className="modal">
                             <div className="modal-box flex justify-center items-center flex-col">
-                            <img className='w-16 pb-6' src={image} alt="ok" />
+                                <img className='w-16 pb-6' src={image} alt="ok" />
                                 <h3 className="text-2xl font-bold">Payment Successfully</h3>
                                 <p className="py-4">Thanks for purchasing.
                                 </p>
@@ -120,6 +121,7 @@ const Dashboard = () => {
 
             </div>
         </div>
+        </HelmetProvider>
     );
 };
 

@@ -1,19 +1,21 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
 import Gadgets from '../Gadgets/Gadgets';
-import {Helmet} from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
-const  Home = () => {
+const Home = () => {
     return (
-        <div>
-             <Helmet> 
-                <title>Gadgets | Gadget Heaven</title>
-            </Helmet>
-            <Banner></Banner>
-            <Gadgets></Gadgets>
-            
-        </div>
+        <HelmetProvider>
+            <div>
+                <Helmet>
+                    <title>Gadgets | Gadget Heaven</title>
+                </Helmet>
+                <Banner></Banner>
+                <Gadgets></Gadgets>
+
+            </div>
+        </HelmetProvider>
     );
 };
 

@@ -11,10 +11,8 @@ import Error from './component/Error/Error';
 import Home from './component/Home/Home';
 import Statistics from './component/Statistics/Statistics';
 import Dashboard from './component/Dashboard/Dashboard';
-import Gadget from './component/Gadget/Gadget';
 import Categories from './component/Categories/Categories';
 import ProductDetails from './component/ProductDetails/ProductDetails';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Faq from './component/Faq/Faq';
 
@@ -32,7 +30,7 @@ const router = createBrowserRouter([
             path: "/category/:category",
             element: <Categories></Categories>
           }
-        ] 
+        ]
       },
       {
         path: "product/:product_id",
@@ -64,6 +62,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
-    
   </StrictMode>,
 )

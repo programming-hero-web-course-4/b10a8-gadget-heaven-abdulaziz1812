@@ -1,23 +1,21 @@
 import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import ReactStars from "react-rating-stars-component";
-import { CiStar } from "react-icons/ci";
 import { PiShoppingCartLight } from "react-icons/pi";
 import { CiHeart } from "react-icons/ci";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { addToStoredCartList, addToStoredWishList } from '../../utility/addToDb';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const ProductDetails = () => {
-    const { product_id } = useParams()
-    const data = useLoaderData()
+    const { product_id } = useParams();
+    const data = useLoaderData();
 
-    const product = data.find(product => product.product_id === product_id)
-    const { product_image, price, product_title, availability, description, specifications, rating } = product
-    
-    const  [disable,setDisable] = useState(false)
+    const product = data.find(product => product.product_id === product_id);
+    const { product_image, price, product_title, availability, description, specifications, rating } = product;
 
+    const [disable, setDisable] = useState(false);
     const star = {
         size: 30,
         value: rating,
@@ -28,27 +26,28 @@ const ProductDetails = () => {
         addToStoredCartList(id)
         toast.success('Item Added to Cart', {
             position: "top-center",
-            });
-    }
+        });
+    };
 
     const handelWishList = (id) => {
         addToStoredWishList(id)
 
         toast.success('Item Added to Wishlist', {
-            position: "top-center",          
-            });
+            position: "top-center",
+        });
         setDisable(true)
-        
-    }
+
+    };
 
     return (
+        <HelmetProvider>
         <div>
             <Helmet>
                 <title>Product Details | Gadget Heaven</title>
             </Helmet>
             <ToastContainer />
             <div className='bg-purple-600 -mt-6'>
-        <div className='md:w-8/12 mx-auto text-white text-center pt-8 pb-8 md:pb-60' >
+                <div className='md:w-8/12 mx-auto text-white text-center pt-8 pb-8 md:pb-60' >
                     <h1 className='font-bold text-3xl mb-4'>Product Details</h1>
                     <p>Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!</p>
                 </div>
@@ -79,19 +78,20 @@ const ProductDetails = () => {
                     </div>
 
                     <div className='flex gap-4 '>
-                        <button onClick={()=>handleAddToCart(product_id)} className="btn rounded-full flex justify-start bg-purple-600 text-white">
+                        <button onClick={() => handleAddToCart(product_id)} className="btn rounded-full flex justify-start bg-purple-600 text-white">
                             Add To Card
                             <PiShoppingCartLight className=' w-10 h-10 p-2  ' />
                         </button>
 
-                        <button onClick={()=>handelWishList(product_id)} className={`btn-ghost rounded-full ${disable? "btn-disabled text-gray-300 bg-slate-200" : ""}`}><CiHeart className=' w-12 h-12 p-2 border rounded-full ' /></button>
-                        
+                        <button onClick={() => handelWishList(product_id)} className={`btn-ghost rounded-full ${disable ? "btn-disabled text-gray-300 bg-slate-200" : ""}`}><CiHeart className=' w-12 h-12 p-2 border rounded-full ' /></button>
+
                     </div>
 
 
                 </div>
             </div>
         </div>
+        </HelmetProvider>
     );
 };
 

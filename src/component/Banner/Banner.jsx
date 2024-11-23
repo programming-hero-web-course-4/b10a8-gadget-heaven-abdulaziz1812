@@ -2,11 +2,11 @@ import React from 'react';
 import bannerImg from '../../assets/banner.jpg'
 import { useNavigate } from 'react-router-dom';
 
-const  Banner = () => {
-    const dashboard = useNavigate()
+const Banner = () => {
+    const dashboard = useNavigate();
 
-    const handelShopNowBtn = () =>{
-        dashboard('/dashboard')
+    const handelShopNowBtn = () => {
+        dashboard('/dashboard');
     }
 
     return (
@@ -25,7 +25,7 @@ const  Banner = () => {
             <div>
                 <div className='md:-mt-52 lg:-mt-64 xl:-mt-72 hidden md:block' >
                     <div className='mx-auto border-2 rounded-[32px] p-6 bg-white bg-opacity-20  w-3/4 sm:h-[400px] md:h-[500px] lg:h-[611px]' >
-                
+
                         <img src={bannerImg} className='rounded-3xl h-full  w-full object-cover object-center ' alt="bannerImg" />
 
                     </div>

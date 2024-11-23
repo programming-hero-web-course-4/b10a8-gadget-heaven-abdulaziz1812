@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Cart = ({ product }) => {
-  
+
   const { product_image, product_title, description, price } = product
   return (
     <div>
